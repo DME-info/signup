@@ -1,0 +1,102 @@
+<!DOCTYPE HTML>
+<html lang="zh" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="utf-8">
+    <title>Account Application</title>
+    <link rel="Shortcut Icon" type="image/x-icon" href="./images/图标.ico"/>
+    <link rel="stylesheet" type="text/css" href="signup.css"/>
+</head>
+
+<body>
+
+<h1>清华大学机械工程系科协招新报名</h1>
+
+<hr/>
+
+<div>
+    <form method="post" action="signup.php">
+        <div>
+            <label for="name">姓名:</label>
+            <input type="text" name="name" id="name" value="" placeholder="  Your name..."
+                   onfocusin="this.placeholder=''" onfocusout="this.placeholder='  Your name'"
+                   required>
+            <span class="error">*</span>
+        </div>
+        <div>
+            <label for="class">班级:</label>
+            <input type="text" name="class" id="class" placeholder="  Your class..."
+                   onfocusin="this.placeholder=''" onfocusout="this.placeholder='  Your class...'"
+                   required>
+            <span class="error">*</span>
+        </div>
+        <div>
+            <label for="id">学号:</label>
+            <input type="text" name="id" id="id" placeholder="  Your student number..."
+                   onfocusin="this.placeholder=''" onfocusout="this.placeholder='  Your student number...'"
+                   required>
+            <span class="error">*</span>
+        </div>
+        <div>
+            <label for="phone">手机:</label>
+            <input type="tel" name="phone" id="phone" placeholder="  Your phone number..."
+                   onfocusin="this.placeholder=''" onfocusout="this.placeholder='  Your phone number...'"
+                   required>
+            <span class="error">*</span>
+        </div>
+        <div>
+            <label for="email">邮箱:</label>
+            <input type="email" name="email" id="email" placeholder="  Your email..."
+                   onfocusin="this.placeholder=''" onfocusout="this.placeholder='  Your email...'"
+                   required>
+            <span class="error">*</span>
+        </div>
+        <div>
+            <label for="WeChat">微信:</label>
+            <input type="text" name="WeChat" id="WeChat" placeholder="  Your WeChat..."
+                   onfocusin="this.placeholder=''" onfocusout="this.placeholder='  Your WeChat...'"
+                   required>
+            <span class="error">*</span>
+        </div>
+        <div>
+            <label for="first">第一志愿</label>
+            <select name="first" id="first" required> ==
+                <option value="0">请选择你想加入的部门</option>
+                <option value="科协学习部">科协学习部</option>
+                <option value="科协项目部">科协项目部</option>
+                <option value="科协赛事部">科协赛事部</option>
+                <option value="科协俱乐部">科协俱乐部</option>
+            </select>
+        </div>
+        <div>
+            <label for="second">第二志愿</label>
+            <select name="second" id="second" required> ==
+                <option value="0">请选择你想加入的部门</option>
+                <option value="科协学习部">科协学习部</option>
+                <option value="科协项目部">科协项目部</option>
+                <option value="科协赛事部">科协赛事部</option>
+                <option value="科协俱乐部">科协俱乐部</option>
+            </select>
+        </div>
+        <div>
+            <label for="third">第三志愿</label>
+            <select name="third" id="third" required> ==
+                <option value="0">请选择你想加入的部门</option>
+                <option value="科协学习部">科协学习部</option>
+                <option value="科协项目部">科协项目部</option>
+                <option value="科协赛事部">科协赛事部</option>
+                <option value="科协俱乐部">科协俱乐部</option>
+            </select>
+        </div>
+        <div>
+            <input type="submit" name="submit" id="submit">
+        </div>
+        <br/><br/>
+    </form>
+</div>
+
+</body>
+</html>
+
+
+
+
