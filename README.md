@@ -32,3 +32,9 @@ CREATE TABLE `signup` (
 ## 注意
 
 &emsp;&emsp;signup.php文件中的密码写为\*\*\*\*\*\*\*，不能放在仓库中！
+
+## 映射
+
++ gitee: https://gitee.com/DME-info/signup.git
++ github: https://github.com/DME-info/signup.git
+
