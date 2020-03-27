@@ -36,7 +36,7 @@ if (!(empty($name)) && !(empty($class)) && !(empty($id)) && !(empty($phone)) && 
     //通过php连接到mysql数据库
     $dbhost = 'localhost';  // mysql服务器主机地址
     $dbuser = 'root';            // mysql用户名
-    $dbpass = 'DME_server';          // mysql用户名密码
+    $dbpass = '********';          // mysql用户名密码
     $conn = mysqli_connect($dbhost, $dbuser, $dbpass);
     if (!$conn) {
         die('Could not connect: ' . mysqli_error());
