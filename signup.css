@@ -24,8 +24,8 @@ input, select {
     border: 0.1em solid #ccc;
     border-radius: 0.5em;
     box-sizing: border-box;
-    -webkit-transition: 0.5s;
-    transition: 0.5s;
+    -webkit-transition: width 0.5s;
+    transition: width 0.5s;
     outline: none;
 }
 
