@@ -67,7 +67,7 @@ input:not(#submit), select {
     padding: 0 3px;
     border: 1px solid silver;
     border-radius: 5px;
-    transition: all .3s ease;
+    transition: all .2s ease;
 }
 
 input:not(#submit):focus, select:focus {
@@ -140,7 +140,7 @@ input:not(#submit):focus, select:focus {
     text-align: center;
     font-weight: bold;
     cursor: pointer;
-    transition: all .3s ease-in-out;
+    transition: all .2s ease-in-out;
 }
 
 .float-icon a {
@@ -182,7 +182,7 @@ input:not(#submit):focus, select:focus {
     height: 29px;
     line-height: 30px;
     text-align: center;
-    transition: all .3s ease-in-out;
+    transition: all .2s ease-in-out;
 }
 
 #xueshenghui li {
