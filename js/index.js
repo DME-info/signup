@@ -13,16 +13,22 @@ $(function () {
     // 提交检查
     $("#form").submit(function () {
         // input输入检查
+        let stop = false;
         $("input").not("#submit").each(function (index) {
             let $this = $(this);
             if ($this.val().trim() === "" || $this.val().trim() === Promotes[index]) {
                 alert("请输入您的" + Names[index]);
+                stop = true;
                 return false;
             } else if (!Patterns[index].test($this.val().trim())) {
                 alert("您输入的" + Names[index] + "格式不正确，请重新输入");
+                stop = true;
                 return false;
             }
         });
+        if (stop) {
+            return false;
+        }
         // 检查第一志愿
         if ($("#first").val().trim() === "0") {
             alert("请选择您的第一志愿");
@@ -95,4 +101,10 @@ $(function () {
             $next.addClass("optional");
         }
     }).change();
+
+    $("#first,#second,#third").click(function () {
+        if ($(this).hasClass("promote")) {
+            $(this).removeClass("promote");
+        }
+    })
 })

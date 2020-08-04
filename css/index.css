@@ -24,13 +24,13 @@ h1 {
     text-align: center;
 }
 
-hr {
-    width: 60%;
-    margin: 20px auto;
-    color: #ccc;
-}
-
 #MyForm {
+    margin: 30px auto 5px auto;
+    padding: 10px 0 20px 0;
+    width: 60%;
+    border: 1px solid gray;
+    border-left-width: 0;
+    border-right-width: 0;
     text-align: center;
 }
 
@@ -66,6 +66,13 @@ input:not(#submit), select {
     margin: 6px 3px;
     padding: 0 3px;
     border: 1px solid silver;
+    border-radius: 5px;
+    transition: all .3s ease;
+}
+
+input:not(#submit):focus, select:focus {
+    outline: none;
+    border: 1px solid #666;
 }
 
 .promote {
@@ -74,8 +81,20 @@ input:not(#submit), select {
 
 #submit {
     width: 60px;
-    height: 24px;
-    line-height: 24px;
+    height: 30px;
+    line-height: 30px;
+    border: 1px solid #999;
+    border-radius: 5px;
+    background: linear-gradient(to right, #eee, #fff, #eee);
+    box-shadow: 0 0 2px 0 rgba(0, 0, 0, .6);
+}
+
+#submit:focus {
+    outline: none;
+}
+
+#submit:active {
+    box-shadow: inset 0 0 2px 0 rgba(0, 0, 0, .6);
 }
 
 .marked {
@@ -112,54 +131,138 @@ input:not(#submit), select {
     color: deepskyblue;
 }
 
-/*
-hr {
-    margin-bottom: 10px;
+.float-icon {
+    position: fixed;
+    right: 15%;
+    width: 60px;
+    height: 40px;
+    line-height: 40px;
     text-align: center;
-    width: 48em;
-    color: #ccc;
-}
-
-input, select {
-    margin: 0.75em 0 0.75em 1em;
-    border: 0.1em solid #ccc;
-    border-radius: 0.5em;
-    box-sizing: border-box;
-    -webkit-transition: width 0.5s;
-    transition: width 0.5s;
-    outline: none;
-}
-
-input {
-    width: 20em;
-    height: 2.5em;
-}
-
-input:focus {
-    border: 0.1em solid #555;
-}
-
-input[type=submit] {
-    height: 3em;
-    width: 5em;
+    font-weight: bold;
     cursor: pointer;
+    transition: all .3s ease-in-out;
 }
 
-input[type=submit]:hover {
-    background-color: #cccccc;
+.float-icon a {
+    color: #fff;
+    text-decoration: none;
 }
 
-select:focus {
-    border: 0.2em solid #555;
+#TMS {
+    top: calc(50% - 100px);
+    background-color: mediumpurple;
 }
 
-select {
-    width: 12em;
-    height: 3em;
-    background-color: #eeeeee;
+#tuanwei {
+    top: calc(50% - 60px);
+    background-color: darkorange;
 }
 
-.error {
-    color: #ff0000;
+#xueshenghui {
+    top: calc(50% - 20px);
+    background-color: darkgreen;
 }
- */
+
+#kexie {
+    top: calc(50% + 20px);
+    background-color: dodgerblue;
+}
+
+.float-icon ul {
+    position: absolute;
+    left: -80px;
+    list-style-type: none;
+    visibility: hidden;
+    opacity: .0;
+    transition: all .1s ease-in-out;
+}
+
+.float-icon li {
+    width: 64px;
+    height: 29px;
+    line-height: 30px;
+    text-align: center;
+    transition: all .3s ease-in-out;
+}
+
+#xueshenghui li {
+    width: 100px;
+}
+
+.float-icon li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.float-icon li + li {
+    border-top: 1px solid #fff;
+}
+
+.float-icon:hover ul {
+    left: -65px;
+    visibility: visible;
+    opacity: 1.0;
+}
+
+#xueshenghui:hover ul {
+    display: block;
+    left: -101px;
+    visibility: visible;
+    opacity: 1.0;
+}
+
+#TMS:hover {
+    background-color: purple;
+}
+
+#tuanwei:hover {
+    background-color: orangered;
+}
+
+#tuanwei ul {
+    top: -55px;
+}
+
+#tuanwei li {
+    background-color: orange;
+}
+
+#tuanwei li:hover {
+    background-color: coral;
+}
+
+#xueshenghui:hover {
+    background-color: darkslategrey;
+}
+
+#xueshenghui ul {
+    top: -70px;
+}
+
+#xueshenghui li {
+    background-color: silver;
+}
+
+#xueshenghui li:hover {
+    background-color: #777;
+}
+
+#kexie:hover {
+    background-color: mediumblue;
+}
+
+#kexie ul {
+    top: -40px;
+}
+
+#kexie li {
+    background-color: lightskyblue;
+}
+
+#kexie li:hover {
+    background-color: deepskyblue;
+}
+
+footer {
+    text-align: center;
+}
