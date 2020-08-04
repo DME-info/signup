@@ -106,5 +106,10 @@ $(function () {
         if ($(this).hasClass("promote")) {
             $(this).removeClass("promote");
         }
-    })
+    });
+
+    // 防止bug
+    document.getElementById("aside").onselectstart = function () {
+        return false;
+    };
 })
