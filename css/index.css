@@ -1,11 +1,14 @@
 body {
-    overflow-y: scroll;
-    font-size: 1em;
-    background-image: url("../images/p0.jpg");
+    /*
+    background-image: url("../images/background.jpg");
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-position: x y;
     background-attachment: fixed;
-    text-align: center;
+    */
+    background: url("../images/background-top-left.jpg") no-repeat fixed,
+    url(../images/background-top-right.jpg) no-repeat fixed,
+    url(../images/background-bottom-left.jpg) no-repeat fixed;
+    background-size: 100% 100%;
 }
 
 h1 {
