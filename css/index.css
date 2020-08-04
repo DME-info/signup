@@ -1,7 +1,7 @@
 body {
     overflow-y: scroll;
     font-size: 1em;
-    background-image: url("images/p0.jpg");
+    background-image: url("../images/p0.jpg");
     background-repeat: no-repeat;
     background-size: 100% 100%;
     background-attachment: fixed;

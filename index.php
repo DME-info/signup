@@ -35,15 +35,15 @@ if (!(empty($name)) && !(empty($class)) && !(empty($id)) && !(empty($phone)) && 
 
     //通过php连接到mysql数据库
     $dbhost = 'localhost';  // mysql服务器主机地址
-    $dbuser = 'root';            // mysql用户名
-    $dbpass = 'DME_server';          // mysql用户名密码
+    $dbuser = 'liuyihao';            // mysql用户名
+    $dbpass = 'lyh26239231';          // mysql用户名密码
     $conn = mysqli_connect($dbhost, $dbuser, $dbpass);
     if (!$conn) {
         die('Could not connect: ' . mysqli_error());
     }
     # echo '数据库连接成功！';
 
-    mysqli_select_db($conn, "mysql") or die("Unable to select database!");
+    mysqli_select_db($conn, "mechinfo") or die("Unable to select database!");
     #  echo "我们会尽快处理您的请求并将反馈结果发送至您的邮箱，请耐心等待，谢谢！";
 
     mysqli_query($conn, "set names utf8");
