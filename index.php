@@ -69,11 +69,11 @@ if (!(empty($name)) && !(empty($class)) && !(empty($id)) && !(empty($phone)) && 
     echo "</script>";
 } else {
     # echo "提交失败"
-    echo $name . "," . $class . "," . $id . "," . $phone . "," . $email . "," . $WeChat . "," . $first . "," . $second . "," . $third;
-    echo "<script>\r\n";
-    echo "alert(\"请选择你想加入的部门！\");\r\n";
-    echo "history.back()";
-    echo "</script>";
+    echo "<p>" . $name . "," . $class . "," . $id . "," . $phone . "," . $email . "," . $WeChat . "," . $first . "," . $second . "," . $third . "</p>";
+    //echo "<script>\r\n";
+    //echo "alert(\"请选择你想加入的部门！\");\r\n";
+    //echo "history.back()";
+    //echo "</script>";
 }
 
 function checkDepa($first, $second, $third)
