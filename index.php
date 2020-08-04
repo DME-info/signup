@@ -10,7 +10,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $second = test_input($_POST['second']);
     $third = test_input($_POST['third']);
     $time = date('Y-m-d h:i:s', $_SERVER['REQUEST_TIME']);
-    echo $name . "," . $class . "," . $id . "," . $phone . "," . $email . "," . $WeChat . "," . $first . "," . $second . "," . $third;
 }
 
 function test_input($data)
@@ -62,18 +61,18 @@ if (!(empty($name)) && !(empty($class)) && !(empty($id)) && !(empty($phone)) && 
 
     # echo "提交成功\n";
     mysqli_close($conn);
-    echo "<p>" . "成功" . $name . "," . $class . "," . $id . "," . $phone . "," . $email . "," . $WeChat . "," . $first . "," . $second . "," . $third . "</p>";
-    //echo "<script>\r\n";
-    //echo "alert(\"提交成功\");\r\n";
-    //echo "location.href='" . $_SERVER["HTTP_REFERER"] . "'";
-    //echo "</script>";
+    # echo "<p>" . "成功" . $name . "," . $class . "," . $id . "," . $phone . "," . $email . "," . $WeChat . "," . $first . "," . $second . "," . $third . "</p>";
+    echo "<script>\r\n";
+    echo "alert(\"提交成功\");\r\n";
+    echo "location.href='" . $_SERVER["HTTP_REFERER"] . "'";
+    echo "</script>";
 } else {
     # echo "提交失败"
-    echo "<p>" . "失败" . $name . "," . $class . "," . $id . "," . $phone . "," . $email . "," . $WeChat . "," . $first . "," . $second . "," . $third . "</p>";
-    //echo "<script>\r\n";
-    //echo "alert(\"请选择你想加入的部门！\");\r\n";
-    //echo "history.back()";
-    //echo "</script>";
+    # echo "<p>" . "失败" . $name . "," . $class . "," . $id . "," . $phone . "," . $email . "," . $WeChat . "," . $first . "," . $second . "," . $third . "</p>";
+    echo "<script>\r\n";
+    echo "alert(\"请选择你想加入的部门！\");\r\n";
+    echo "history.back()";
+    echo "</script>";
 }
 
 function checkDepa($first, $second, $third)

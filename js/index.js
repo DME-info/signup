@@ -44,6 +44,9 @@ $(function () {
     let Promotes = ["Your name...", "Your class...", "Your student id...", "Your phone number...", "Your email...", "Your wechat..."];
 
     $("input").not("#submit").each(function (index) {
+        if ($(this).val().trim() !== Promotes[index]) {
+            $(this).removeClass("promote");
+        }
         $(this).focus(function () {
             let $this = $(this);
             if ($this.val().trim() === Promotes[index]) {
