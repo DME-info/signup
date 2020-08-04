@@ -1,102 +1,96 @@
-<!DOCTYPE HTML>
-<html lang="zh" xmlns="http://www.w3.org/1999/html">
+<!DOCTYPE html>
+<html lang="zh-CN">
 <head>
-    <meta charset="utf-8">
+    <!--网页字符集-->
+    <meta charset="UTF-8"/>
+    <!--网页关键字-->
+    <meta name="keywords" content="THU DME SIGNUP"/>
+    <!--网页描述-->
+    <meta name="description" content="Our own website used to signup!"/>
+    <!--网页作者-->
+    <meta name="author" content="DME Study"/>
+    <!--网页标题-->
     <title>Account Application</title>
-    <link rel="Shortcut Icon" type="image/x-icon" href="favicon.ico"/>
+    <!--网页图标-->
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico"/>
+    <!--CSS-->
     <link rel="stylesheet" type="text/css" href="css/index.css"/>
+    <!--JavaScript-->
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/index.js"></script>
 </head>
-
 <body>
-
 <h1>清华大学机械工程系科协招新报名</h1>
-
 <hr/>
-
-<div>
-    <form method="post" action="index.php">
-        <div>
-            <label for="name">姓名:</label>
-            <input type="text" name="name" id="name" value="" placeholder="  Your name..."
-                   onfocusin="this.placeholder=''" onfocusout="this.placeholder='  Your name'"
-                   required>
-            <span class="error">*</span>
-        </div>
-        <div>
-            <label for="class">班级:</label>
-            <input type="text" name="class" id="class" placeholder="  Your class..."
-                   onfocusin="this.placeholder=''" onfocusout="this.placeholder='  Your class...'"
-                   required>
-            <span class="error">*</span>
-        </div>
-        <div>
-            <label for="id">学号:</label>
-            <input type="text" name="id" id="id" placeholder="  Your student number..."
-                   onfocusin="this.placeholder=''" onfocusout="this.placeholder='  Your student number...'"
-                   required>
-            <span class="error">*</span>
-        </div>
-        <div>
-            <label for="phone">手机:</label>
-            <input type="tel" name="phone" id="phone" placeholder="  Your phone number..."
-                   onfocusin="this.placeholder=''" onfocusout="this.placeholder='  Your phone number...'"
-                   required>
-            <span class="error">*</span>
-        </div>
-        <div>
-            <label for="email">邮箱:</label>
-            <input type="email" name="email" id="email" placeholder="  Your email..."
-                   onfocusin="this.placeholder=''" onfocusout="this.placeholder='  Your email...'"
-                   required>
-            <span class="error">*</span>
-        </div>
-        <div>
-            <label for="WeChat">微信:</label>
-            <input type="text" name="WeChat" id="WeChat" placeholder="  Your WeChat..."
-                   onfocusin="this.placeholder=''" onfocusout="this.placeholder='  Your WeChat...'"
-                   required>
-            <span class="error">*</span>
-        </div>
-        <div>
+<div id="MyForm">
+    <form id="form" method="post" action="index.php">
+        <p>
+            <label for="name">姓名</label>
+            <input type="text" id="name" class="promote" value="Your name..." required/>
+            <span class="marked required"></span>
+        </p>
+        <p>
+            <label for="class">班级</label>
+            <input type="text" id="class" class="promote" value="Your class..." required/>
+            <span class="marked required"></span>
+        </p>
+        <p>
+            <label for="id">学号</label>
+            <input type="text" id="id" class="promote" value="Your student id..." required/>
+            <span class="marked required"></span>
+        </p>
+        <p>
+            <label for="phone">手机</label>
+            <input type="tel" id="phone" class="promote" value="Your phone number..." required/>
+            <span class="marked required"></span>
+        </p>
+        <p>
+            <label for="email">邮箱</label>
+            <input type="email" id="email" class="promote" value="Your email..." required/>
+            <span class="marked required"></span>
+        </p>
+        <p>
+            <label for="WeChat">微信</label>
+            <input type="text" id="WeChat" class="promote" value="Your wechat..." required/>
+            <span class="marked required"></span>
+        </p>
+        <p>
             <label for="first">第一志愿</label>
-            <select name="first" id="first" required> ==
+            <select id="first" required>
                 <option value="0">请选择你想加入的部门</option>
                 <option value="科协学习部">科协学习部</option>
                 <option value="科协项目部">科协项目部</option>
                 <option value="科协赛事部">科协赛事部</option>
                 <option value="科协俱乐部">科协俱乐部</option>
             </select>
-        </div>
-        <div>
+            <span class="marked required"></span>
+        </p>
+        <p>
             <label for="second">第二志愿</label>
-            <select name="second" id="second" required> ==
+            <select id="second" required>
                 <option value="0">请选择你想加入的部门</option>
                 <option value="科协学习部">科协学习部</option>
                 <option value="科协项目部">科协项目部</option>
                 <option value="科协赛事部">科协赛事部</option>
                 <option value="科协俱乐部">科协俱乐部</option>
             </select>
-        </div>
-        <div>
+            <span class="marked optional"></span>
+        </p>
+        <p>
             <label for="third">第三志愿</label>
-            <select name="third" id="third" required> ==
+            <select id="third" required>
                 <option value="0">请选择你想加入的部门</option>
                 <option value="科协学习部">科协学习部</option>
                 <option value="科协项目部">科协项目部</option>
                 <option value="科协赛事部">科协赛事部</option>
                 <option value="科协俱乐部">科协俱乐部</option>
             </select>
-        </div>
-        <div>
-            <input type="submit" name="submit" id="submit">
-        </div>
-        <br/><br/>
+            <span class="marked optional"></span>
+        </p>
+        <p>
+            <input type="submit" id="submit" value="提交"/>
+        </p>
     </form>
 </div>
-
 </body>
 </html>
-
-
-
-

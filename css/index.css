@@ -1,22 +1,120 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
 body {
+    margin: 10px;
+    background: url(../images/background-center.png) no-repeat center center/calc(293px * 2) calc(289px * 2) fixed,
+    url(../images/background-top-left.png) no-repeat 10px 10px / calc(394px * 1.2) calc(64px * 1.2) fixed,
+    url(../images/background-top-right.png) no-repeat calc(100% - 10px) 10px / calc(250px * 1.5) calc(86px * 1.5) fixed,
+    url(../images/background-bottom-left.png) no-repeat 10px calc(100% - 10px) / calc(129px * 1.5) calc(175px * 1.5) fixed,
+    url(../images/background-bottom-right.png) no-repeat calc(100% - 10px) calc(100% - 10px) / calc(789px * 0.5) calc(381px * 0.5) fixed;
     /*
-    background-image: url("../images/background.jpg");
-    background-repeat: no-repeat;
-    background-position: x y;
-    background-attachment: fixed;
-    */
-    background: url("../images/background-top-left.jpg") no-repeat fixed,
-    url(../images/background-top-right.jpg) no-repeat fixed,
-    url(../images/background-bottom-left.jpg) no-repeat fixed;
-    background-size: 100% 100%;
+          background-image: url("../images/background.jpg");
+          background-repeat: no-repeat;
+          background-position: left top;
+          background-size: width length;
+          background-attachment: fixed;
+        */
 }
 
 h1 {
-    margin-top: 5em;
+    margin-top: 8%;
+    text-align: center;
 }
 
 hr {
-    margin-bottom: 1em;
+    width: 60%;
+    margin: 20px auto;
+    color: #ccc;
+}
+
+#MyForm {
+    text-align: center;
+}
+
+p {
+    width: 320px;
+    margin: 10px auto;
+    *zoom: 1;
+}
+
+/*清楚浮动*/
+p::after {
+    clear: both;
+    content: "";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+label {
+    float: left;
+    width: 80px;
+    height: 40px;
+    margin-right: 10px;
+    line-height: 40px;
+    text-align: right;
+}
+
+input:not(#submit), select {
+    box-sizing: content-box;
+    float: left;
+    height: 26px;
+    width: 168px;
+    margin: 6px 3px;
+    padding: 0 3px;
+    border: 1px solid silver;
+}
+
+.promote {
+    color: #aaa;
+}
+
+#submit {
+    width: 60px;
+    height: 24px;
+    line-height: 24px;
+}
+
+.marked {
+    float: left;
+    width: 10px;
+    height: 40px;
+    margin-left: 10px;
+    line-height: 40px;
+    text-align: left;
+    font-weight: bold;
+}
+
+.marked::after {
+    transition: all .1s ease;
+}
+
+.required::after {
+    content: "*";
+    color: #f00;
+}
+
+.right::after {
+    content: "√";
+    color: limegreen;
+}
+
+.wrong::after {
+    content: "×";
+    color: orangered;
+}
+
+.optional:after {
+    content: "·";
+    color: deepskyblue;
+}
+
+/*
+hr {
+    margin-bottom: 10px;
     text-align: center;
     width: 48em;
     color: #ccc;
@@ -64,3 +162,4 @@ select {
 .error {
     color: #ff0000;
 }
+ */
