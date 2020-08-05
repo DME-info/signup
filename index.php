@@ -12,7 +12,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $secondDepartment = test_input($_POST['second-department']);
     $thirdOrganization = test_input($_POST['third-organization']);
     $thirdDepartment = test_input($_POST['third-department']);
-    $time = date('Y-m-d h:i:s', $_SERVER['REQUEST_TIME']);
 }
 
 function test_input($data)
@@ -52,9 +51,9 @@ if (!(empty($name)) && !(empty($class)) && !(empty($id)) && !(empty($phone)) && 
     mysqli_query($conn, "set names utf8");
 
     $sql = "INSERT INTO `signup`" .
-        "(name,class,id,phone,email,WeChat,firstOrganization,firstDepartment,secondOrganization,secondDepartment,thirdOrganization,thirdDepartment,time) " .
+        "(name,class,id,phone,email,WeChat,firstOrganization,firstDepartment,secondOrganization,secondDepartment,thirdOrganization,thirdDepartment) " .
         "VALUES " .
-        "('$name','$class','$id','$phone','$email','$WeChat','$firstOrganization','$firstDepartment','$secondOrganization','$secondDepartment','$thirdOrganization','$thirdDepartment','$time')";
+        "('$name','$class','$id','$phone','$email','$WeChat','$firstOrganization','$firstDepartment','$secondOrganization','$secondDepartment','$thirdOrganization','$thirdDepartment')";
 
     $result = mysqli_query($conn, $sql);
 

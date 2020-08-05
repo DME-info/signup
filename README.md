@@ -17,7 +17,7 @@ CREATE TABLE `signup` (
     `first` VARCHAR(64),
     `second` VARCHAR(64),
     `third` VARCHAR(64),
-    `time` TIMESTAMP
+    `time` TIMESTAMP DEFAULT NOW()
 ) ENGINE=INNODB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8
 ```
 
@@ -37,7 +37,7 @@ CREATE TABLE `signup` (
     `secondDepartment` VARCHAR(64),
     `thirdOrganization` VARCHAR(64),
     `thirdDepartment` VARCHAR(64),
-    `time` TIMESTAMP
+    `time` TIMESTAMP DEFAULT NOW()
 ) ENGINE=INNODB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8
 ```
 
