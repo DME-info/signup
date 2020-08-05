@@ -12,6 +12,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $secondDepartment = test_input($_POST['second-department']);
     $thirdOrganization = test_input($_POST['third-organization']);
     $thirdDepartment = test_input($_POST['third-department']);
+    // $first = test_input($_POST['first']);
+    // $second = test_input($_POST['second']);
+    // $third = test_input($_POST['third']);
     $time = date('Y-m-d h:i:s', $_SERVER['REQUEST_TIME']);
 }
 
@@ -34,7 +37,7 @@ session_start();
     if(checkDepa($first, $second, $third)){}
     //I have make it sure that they must not be empty!
  */
-if (!(empty($name)) && !(empty($class)) && !(empty($id)) && !(empty($phone)) && !(empty($email)) && !(empty($WeChat)) && checkDepa($firstDepartment, $secondDepartment, $thirdDepartment)) {
+if (!(empty($name)) && !(empty($class)) && !(empty($id)) && !(empty($phone)) && !(empty($email)) && !(empty($WeChat)) && checkDepa($first, $second, $third)) {
 
     //通过php连接到mysql数据库
     $dbhost = 'localhost';  // mysql服务器主机地址
@@ -52,9 +55,9 @@ if (!(empty($name)) && !(empty($class)) && !(empty($id)) && !(empty($phone)) && 
     mysqli_query($conn, "set names utf8");
 
     $sql = "INSERT INTO signup " .
-        "(name,class,id,phone,email,WeChat,first-organization,first-department,second-organization,second-department,third-organization,third-department,time) " .
+        "(name,class,id,phone,email,WeChat,first,second,third,time) " .
         "VALUES " .
-        "('$name','$class','$id','$phone','$email','$WeChat','$firstOrganization','$firstDepartment','$secondOrganization','$secondDepartment','$thirdOrganization','$thirdDepartment','$time')";
+        "('$name','$class','$id','$phone','$email','$WeChat','$first','$second','$third','$time')";
 
     $result = mysqli_query($conn, $sql);
 

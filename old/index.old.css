@@ -58,10 +58,6 @@ label {
     text-align: right;
 }
 
-.none {
-    display: none;
-}
-
 input:not(#submit), select {
     box-sizing: content-box;
     float: left;
@@ -72,14 +68,6 @@ input:not(#submit), select {
     border: 1px solid silver;
     border-radius: 5px;
     transition: all .2s ease;
-}
-
-.left-select {
-    width: 63px;
-}
-
-.right-select {
-    width: 91px;
 }
 
 input:not(#submit):focus, select:focus {

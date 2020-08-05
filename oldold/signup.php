@@ -6,12 +6,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $phone = test_input($_POST["phone"]);
     $email = test_input($_POST["email"]);
     $WeChat = test_input($_POST["WeChat"]);
-    $firstOrganization = test_input($_POST["first-organization"]);
-    $firstDepartment = test_input($_POST['first-department']);
-    $secondOrganization = test_input($_POST['second-organization']);
-    $secondDepartment = test_input($_POST['second-department']);
-    $thirdOrganization = test_input($_POST['third-organization']);
-    $thirdDepartment = test_input($_POST['third-department']);
+    $first = test_input($_POST['first']);
+    $second = test_input($_POST['second']);
+    $third = test_input($_POST['third']);
     $time = date('Y-m-d h:i:s', $_SERVER['REQUEST_TIME']);
 }
 
@@ -34,27 +31,27 @@ session_start();
     if(checkDepa($first, $second, $third)){}
     //I have make it sure that they must not be empty!
  */
-if (!(empty($name)) && !(empty($class)) && !(empty($id)) && !(empty($phone)) && !(empty($email)) && !(empty($WeChat)) && checkDepa($firstDepartment, $secondDepartment, $thirdDepartment)) {
+if (!(empty($name)) && !(empty($class)) && !(empty($id)) && !(empty($phone)) && !(empty($email)) && !(empty($WeChat)) && checkDepa($first, $second, $third)) {
 
     //通过php连接到mysql数据库
     $dbhost = 'localhost';  // mysql服务器主机地址
-    $dbuser = 'liuyihao';            // mysql用户名
-    $dbpass = 'lyh26239231';          // mysql用户名密码
+    $dbuser = 'root';            // mysql用户名
+    $dbpass = '********';          // mysql用户名密码
     $conn = mysqli_connect($dbhost, $dbuser, $dbpass);
     if (!$conn) {
         die('Could not connect: ' . mysqli_error());
     }
     # echo '数据库连接成功！';
 
-    mysqli_select_db($conn, "mechinfo") or die("Unable to select database!");
+    mysqli_select_db($conn, "mysql") or die("Unable to select database!");
     #  echo "我们会尽快处理您的请求并将反馈结果发送至您的邮箱，请耐心等待，谢谢！";
 
     mysqli_query($conn, "set names utf8");
 
     $sql = "INSERT INTO signup " .
-        "(name,class,id,phone,email,WeChat,first-organization,first-department,second-organization,second-department,third-organization,third-department,time) " .
+        "(name,class,id,phone,email,WeChat,first,second,third,time) " .
         "VALUES " .
-        "('$name','$class','$id','$phone','$email','$WeChat','$firstOrganization','$firstDepartment','$secondOrganization','$secondDepartment','$thirdOrganization','$thirdDepartment','$time')";
+        "('$name','$class','$id','$phone','$email','$WeChat','$first','$second','$third','$time')";
 
     $result = mysqli_query($conn, $sql);
 
@@ -64,14 +61,13 @@ if (!(empty($name)) && !(empty($class)) && !(empty($id)) && !(empty($phone)) && 
 
     # echo "提交成功\n";
     mysqli_close($conn);
-    # echo "<p>" . "成功" . $name . "," . $class . "," . $id . "," . $phone . "," . $email . "," . $WeChat . "," . $first . "," . $second . "," . $third . "</p>";
+
     echo "<script>\r\n";
     echo "alert(\"提交成功\");\r\n";
     echo "location.href='" . $_SERVER["HTTP_REFERER"] . "'";
     echo "</script>";
 } else {
-    # echo "提交失败"
-    # echo "<p>" . "失败" . $name . "," . $class . "," . $id . "," . $phone . "," . $email . "," . $WeChat . "," . $first . "," . $second . "," . $third . "</p>";
+    # echo "提交失败";
     echo "<script>\r\n";
     echo "alert(\"请选择你想加入的部门！\");\r\n";
     echo "history.back()";
