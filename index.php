@@ -59,7 +59,8 @@ if (!(empty($name)) && !(empty($class)) && !(empty($id)) && !(empty($phone)) && 
     $result = mysqli_query($conn, $sql);
 
     if (!$result) {
-        die("data insert error");
+        // die("data insert error");
+        die($sql);
     }
 
     # echo "提交成功\n";
