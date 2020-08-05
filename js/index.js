@@ -30,7 +30,7 @@ $(function () {
             return false;
         }
         // 检查第一志愿
-        if ($("#first-department").val().trim() === "0") {
+        if ($("#first-department").val().trim() === "") {
             alert("请选择您的第一志愿");
             return false;
         }
@@ -78,7 +78,7 @@ $(function () {
     $("#first-department").change(function () {
         let $this = $(this);
         let $next = $(this).next();
-        if ($this.val() !== "0") {
+        if ($this.val() !== "") {
             $next.removeClass("required");
             $next.removeClass("wrong");
             $next.addClass("right");
@@ -92,7 +92,7 @@ $(function () {
     $("#second-department,#third-department").change(function () {
         let $this = $(this);
         let $next = $(this).next();
-        if ($this.val() !== "0") {
+        if ($this.val() !== "") {
             $next.removeClass("optional");
             $next.removeClass("wrong");
             $next.addClass("right");
@@ -138,7 +138,7 @@ $(function () {
         $next.empty();
         $next.append($option0);
         switch ($this.val()) {
-            case "0":
+            case "":
                 break;
             case "TMS":
                 $next.append($option1);

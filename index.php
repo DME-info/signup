@@ -51,8 +51,8 @@ if (!(empty($name)) && !(empty($class)) && !(empty($id)) && !(empty($phone)) && 
 
     mysqli_query($conn, "set names utf8");
 
-    $sql = "INSERT INTO signup " .
-        "(name,class,id,phone,email,WeChat,first-organization,first-department,second-organization,second-department,third-organization,third-department,time) " .
+    $sql = "INSERT INTO `signup`" .
+        "(name,class,id,phone,email,WeChat,firstOrganization,firstDepartment,secondOrganization,secondDepartment,thirdOrganization,thirdDepartment,time) " .
         "VALUES " .
         "('$name','$class','$id','$phone','$email','$WeChat','$firstOrganization','$firstDepartment','$secondOrganization','$secondDepartment','$thirdOrganization','$thirdDepartment','$time')";
 
@@ -81,7 +81,7 @@ if (!(empty($name)) && !(empty($class)) && !(empty($id)) && !(empty($phone)) && 
 
 function checkDepa($first, $second, $third)
 {
-    if ($first == "0" && $second == "0" && $third == "0") {
+    if ($first == "" && $second == "" && $third == "") {
         return 0;
     }
     return 1;

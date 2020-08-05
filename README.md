@@ -31,12 +31,12 @@ CREATE TABLE `signup` (
     `phone` VARCHAR(64),
     `email` VARCHAR(64),
     `WeChat` VARCHAR(64),
-    `first-organization` VARCHAR(64),
-    `first-department` VARCHAR(64),
-    `second-organization` VARCHAR(64),
-    `second-department` VARCHAR(64),
-    `third-organization` VARCHAR(64),
-    `third-department` VARCHAR(64),
+    `firstOrganization` VARCHAR(64),
+    `firstDepartment` VARCHAR(64),
+    `secondOrganization` VARCHAR(64),
+    `secondDepartment` VARCHAR(64),
+    `thirdOrganization` VARCHAR(64),
+    `thirdDepartment` VARCHAR(64),
     `time` TIMESTAMP
 ) ENGINE=INNODB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8
 ```
