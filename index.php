@@ -68,7 +68,7 @@ if (!(empty($name)) && !(empty($class)) && !(empty($id)) && !(empty($phone)) && 
 
     # echo "提交成功\n";
     mysqli_close($conn);
-    echo "<p>" . "成功" . $name . "," . $class . "," . $id . "," . $phone . "," . $email . "," . $WeChat . "," . $first . "," . $second . "," . $third . "</p>";
+    # echo "<p>" . "成功" . $name . "," . $class . "," . $id . "," . $phone . "," . $email . "," . $WeChat . "," . $first . "," . $second . "," . $third . "</p>";
     echo "<script>\r\n";
     # echo "alert(\"提交成功\");\r\n";
     # echo "location.href='" . $_SERVER["HTTP_REFERER"] . "';";
