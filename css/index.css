@@ -145,8 +145,8 @@ input:not(#submit):focus, select:focus {
 
 #aside {
     position: fixed;
-    right: 20%;
-    top: 40%;
+    right: calc(20% + 60px);
+    top: 300px;
 }
 
 .float-icon {
