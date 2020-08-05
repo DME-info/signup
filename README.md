@@ -70,3 +70,4 @@ CREATE TABLE `signup` (
 + gitee: https://gitee.com/DME-info/signup.git
 + github: https://github.com/DME-info/signup.git
 
+<p style="text-align:right;"><em>By: 刘怡豪</em><br/>2020/8/5</p>
