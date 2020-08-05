@@ -60,21 +60,26 @@ if (!(empty($name)) && !(empty($class)) && !(empty($id)) && !(empty($phone)) && 
 
     if (!$result) {
         // die("data insert error");
-        die($sql);
+        // die($sql);
+        die("<script>" .
+            "alert('提交失败，数据库发生未知错误。\\n如果可能，请联系科协学习部相关负责人！');" .
+            "</script>");
     }
 
     # echo "提交成功\n";
     mysqli_close($conn);
-    # echo "<p>" . "成功" . $name . "," . $class . "," . $id . "," . $phone . "," . $email . "," . $WeChat . "," . $first . "," . $second . "," . $third . "</p>";
+    echo "<p>" . "成功" . $name . "," . $class . "," . $id . "," . $phone . "," . $email . "," . $WeChat . "," . $first . "," . $second . "," . $third . "</p>";
     echo "<script>\r\n";
-    echo "alert(\"提交成功\");\r\n";
-    echo "location.href='" . $_SERVER["HTTP_REFERER"] . "'";
+    # echo "alert(\"提交成功\");\r\n";
+    # echo "location.href='" . $_SERVER["HTTP_REFERER"] . "';";
+    echo "location.href='success.html';";
     echo "</script>";
+
 } else {
     # echo "提交失败"
     # echo "<p>" . "失败" . $name . "," . $class . "," . $id . "," . $phone . "," . $email . "," . $WeChat . "," . $first . "," . $second . "," . $third . "</p>";
     echo "<script>\r\n";
-    echo "alert(\"请选择你想加入的部门！\");\r\n";
+    echo "alert(\"提交失败，表单发生未知错误，如果可能，请联系科协学习部相关负责人\");\r\n";
     echo "history.back()";
     echo "</script>";
 }
