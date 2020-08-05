@@ -101,7 +101,7 @@ $(function () {
             $next.removeClass("wrong");
             $next.addClass("optional");
         }
-    }).change();
+    });
 
     // 防止bug
     document.getElementById("aside").onselectstart = function () {
@@ -110,7 +110,7 @@ $(function () {
 
     // 下拉列表选项变化
     // 0
-    let $option0 = "<option value='0'>请选择你想加入的部门</option>";
+    let $option0 = "<option value=''>请选择你想加入的部门</option>";
     // TMS
     let $option1 = "<option value='TMS'>TMS</option>";
     // 团委
@@ -156,5 +156,5 @@ $(function () {
                 break;
         }
         $next.change();
-    });
+    }).change();
 })
