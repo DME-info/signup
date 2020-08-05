@@ -1,0 +1,96 @@
+#wrapper {
+    position: relative;
+    margin: 120px auto;
+    width: 600px;
+    height: 400px;
+    justify-content: center;
+    align-items: center;
+    border: solid silver;
+    border-width: 0 0 3px 3px;
+    border-radius: 30px;
+    box-shadow: -1px 1px 15px rgba(0, 0, 0, .5);
+    background: linear-gradient(to bottom, oldlace, floralwhite, ghostwhite);
+}
+
+header {
+    position: absolute;
+    top: 80px;
+    left: 40px;
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+    font-size: 32px;
+    font-weight: bold;
+    color: #333;
+    text-shadow: -1px -1px 5px #eeeeee,
+    -2px -2px 5px #999999,
+    1px 1px 10px #eeeeee;
+}
+
+p {
+    position: absolute;
+    top: 140px;
+    left: 100px;
+    width: 400px;
+    font-size: 20px;
+    text-indent: 2em;
+    line-height: 32px;
+    color: #333333;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+#url {
+    position: absolute;
+    top: 260px;
+    left: 200px;
+    display: inline-block;
+}
+
+#url li {
+    display: inline-block;
+
+}
+
+#url a::before {
+    display: inline-block;
+    margin-bottom: -9px;
+    margin-right: 8px;
+    width: 32px;
+    height: 32px;
+    content: '';
+}
+
+#url li:first-child a::before {
+    background: url(../images/favicon-kexie.ico);
+}
+
+#url li:last-child a::before {
+    background: url(../images/owncloud.png) center center/32px 32px;
+}
+
+#url li a {
+    margin: 10px 10px;
+    padding: 12px 16px;
+    width: 120px;
+    height: 34px;
+    line-height: 34px;
+    background: linear-gradient(to top left, #eee, #ccc, #eee);
+}
+
+#url li a:hover {
+    background: linear-gradient(to top left, #ddd, #bbb, #ddd);
+}
+
+
+
+
