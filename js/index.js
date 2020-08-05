@@ -72,6 +72,9 @@ $(function () {
                 $next.addClass("wrong");
             }
         }).keyup();
+        $(this).change(function () {
+            $(this).keyup();
+        });
     });
 
     // 第一个下拉列表
