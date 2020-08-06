@@ -50,11 +50,17 @@ if (!(empty($name)) && !(empty($class)) && !(empty($id)) && !(empty($phone)) && 
 
     mysqli_query($conn, "set names utf8");
 
+    $sql = <<< SQL
+INSERT INTO `signup`(name,class,id,phone,email,WeChat,firstOrganization,firstDepartment,secondOrganization,secondDepartment,thirdOrganization,thirdDepartment)
+VALUES('$name','$class','$id','$phone','$email','$WeChat','$firstOrganization','$firstDepartment','$secondOrganization','$secondDepartment','$thirdOrganization','$thirdDepartment')
+SQL;
+
+    /*
     $sql = "INSERT INTO `signup`" .
         "(name,class,id,phone,email,WeChat,firstOrganization,firstDepartment,secondOrganization,secondDepartment,thirdOrganization,thirdDepartment) " .
         "VALUES " .
         "('$name','$class','$id','$phone','$email','$WeChat','$firstOrganization','$firstDepartment','$secondOrganization','$secondDepartment','$thirdOrganization','$thirdDepartment')";
-
+      */
     $result = mysqli_query($conn, $sql);
 
     if (!$result) {
