@@ -146,7 +146,7 @@ input:not(#submit):focus, select:focus {
 #aside {
     position: fixed;
     right: calc(20% + 60px);
-    top: 300px;
+    top: calc(50% - 60px);
 }
 
 .float-icon {
@@ -284,7 +284,7 @@ footer {
     text-align: center;
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 800px) {
     body {
         background: url(../images/background-top-left.png) no-repeat 1px 10px / calc(394px) calc(64px) fixed,
         url(../images/background-top-right.png) no-repeat calc(100% - 1px) 1px / calc(250px) calc(86px) fixed,
@@ -302,7 +302,12 @@ footer {
     }
 
     #aside {
-        top: calc(50% - 60px);
         right: 60px;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    #aside {
+        display: none;
     }
 }
