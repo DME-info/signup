@@ -9,7 +9,7 @@ body {
     url(../images/background-top-right.png) no-repeat calc(100% - 10px) 10px / calc(250px * 1.5) calc(86px * 1.5) fixed,
     url(../images/background-bottom-left.png) no-repeat 10px calc(100% - 10px) / calc(129px * 1.5) calc(175px * 1.5) fixed,
     url(../images/background-bottom-right.png) no-repeat calc(100% - 10px) calc(100% - 10px) / calc(789px * 0.5) calc(381px * 0.5) fixed,
-url(../images/background-center.png) no-repeat center center/calc(293px * 2) calc(289px * 2) fixed;
+    url(../images/background-center.png) no-repeat center center/calc(293px * 2) calc(289px * 2) fixed;
     /*
           background-image: url("../images/background.jpg");
           background-repeat: no-repeat;
@@ -282,4 +282,27 @@ input:not(#submit):focus, select:focus {
 
 footer {
     text-align: center;
+}
+
+@media screen and (max-width: 550px) {
+    body {
+        background: url(../images/background-top-left.png) no-repeat 1px 10px / calc(394px) calc(64px) fixed,
+        url(../images/background-top-right.png) no-repeat calc(100% - 1px) 1px / calc(250px) calc(86px) fixed,
+        url(../images/background-bottom-left.png) no-repeat 1px calc(100% - 1px) / calc(129px) calc(175px) fixed,
+        url(../images/background-bottom-right.png) no-repeat calc(100% - 1px) calc(100% - 1px) / calc(789px * 0.3) calc(381px * 0.3) fixed,
+        url(../images/background-center.png) no-repeat center center/calc(293px) calc(289px) fixed;
+    }
+
+    h1 {
+        margin-top: 80px;
+    }
+
+    #MyForm {
+        width: 100%;
+    }
+
+    #aside {
+        top: calc(50% - 60px);
+        right: 60px;
+    }
 }
