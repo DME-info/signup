@@ -93,7 +93,7 @@ input:not(#submit):focus, select:focus {
 
 #submit {
     width: 60px;
-    height: 30px;
+    height: 32px;
     line-height: 30px;
     border: 1px solid #999;
     border-radius: 5px;
@@ -286,7 +286,7 @@ footer {
 
 @media screen and (max-width: 800px) {
     body {
-        background: url(../images/background-top-left.png) no-repeat 1px 10px / calc(394px) calc(64px) fixed,
+        background: url(../images/background-top-left.png) no-repeat 1px 10px / calc(394px * 0.8) calc(64px * 0.8) fixed,
         url(../images/background-top-right.png) no-repeat calc(100% - 1px) 1px / calc(250px) calc(86px) fixed,
         url(../images/background-bottom-left.png) no-repeat 1px calc(100% - 1px) / calc(129px) calc(175px) fixed,
         url(../images/background-bottom-right.png) no-repeat calc(100% - 1px) calc(100% - 1px) / calc(789px * 0.3) calc(381px * 0.3) fixed,
