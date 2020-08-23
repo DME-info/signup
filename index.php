@@ -68,6 +68,7 @@ SQL;
         // die($sql);
         die("<script>" .
             "alert('提交失败，数据库发生未知错误。\\n如果可能，请联系科协学习部相关负责人！');" .
+            "history.back();" . 
             "</script>");
     }
 
